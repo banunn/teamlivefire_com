@@ -1,16 +1,25 @@
 <template>
   <v-app light>
-    <v-app-bar flat clipped-left="clipped" fixed app>
+    <v-app-bar :color="bg" height="90px" flat hide-on-scroll fixed app>
+      <NuxtLink to="/">
+        <img class="logo" src="~/assets/logo.svg" alt="" />
+      </NuxtLink>
       <v-spacer />
-      <v-btn to="/support">Support</v-btn>
-      <v-btn color="secondary" class="ml-4">Log In</v-btn>
+      <v-btn text to="/support">Support</v-btn>
+      <v-btn
+        depressed
+        tag="a"
+        href="https://access.teamlivefire.com/manage/"
+        target="blank"
+        color="black"
+        class="ml-4 white--text"
+        >Log In</v-btn
+      >
     </v-app-bar>
-    <v-main>
-      <v-container>
-        <Nuxt />
-      </v-container>
+    <v-main :class="{ 'pt-md-0': routeName === '/' }">
+      <Nuxt />
     </v-main>
-    <v-footer :absolute="!fixed" app>
+    <v-footer app>
       <span>&copy; {{ new Date().getFullYear() }}</span>
     </v-footer>
   </v-app>
@@ -20,26 +29,36 @@
 export default {
   data() {
     return {
-      clipped: false,
-      drawer: false,
-      fixed: false,
-      items: [
-        {
-          icon: 'mdi-apps',
-          title: 'Welcome',
-          to: '/',
-        },
-        {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire',
-        },
-      ],
-      miniVariant: false,
-      right: true,
-      rightDrawer: false,
-      title: 'Vuetify.js',
+      bg: 'transparent',
     }
+  },
+  mounted() {
+    window.onscroll = () => {
+      this.changeColor()
+    }
+  },
+  methods: {
+    changeColor() {
+      if (
+        document.body.scrollTop > 100 ||
+        document.documentElement.scrollTop > 100
+      ) {
+        this.bg = 'white'
+      } else {
+        this.bg = 'transparent'
+      }
+    },
+  },
+  computed: {
+    routeName() {
+      return this.$route.path
+    },
   },
 }
 </script>
+
+<style scoped lang="scss">
+.logo {
+  width: 212px;
+}
+</style>
