@@ -19,8 +19,21 @@
     <v-main :class="{ 'pt-md-0': routeName === '/' }">
       <Nuxt />
     </v-main>
-    <v-footer app>
-      <span>&copy; {{ new Date().getFullYear() }}</span>
+    <v-footer absolute dark app class="black">
+      <v-card
+        class="pa-8 white--text text-center black"
+        style="width: 100%"
+        flat
+        tile
+      >
+        <div class="row justify-space-between">
+          <span>&copy; LiveFire, LLC {{ new Date().getFullYear() }}</span>
+          <div class="links">
+            <a href="" class="white--text">Terms &amp; Conditions</a> |
+            <a href="" class="white--text">Privacy Policy</a>
+          </div>
+        </div>
+      </v-card>
     </v-footer>
   </v-app>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div>
     <home-hero />
     <get-started />
     <div class="wrap">
@@ -20,6 +20,10 @@
         :reverse="b.reverse"
       />
     </div>
+    <lf-mission></lf-mission>
+    <div class="wrap">
+      <lf-support></lf-support>
+    </div>
   </div>
 </template>
 
@@ -27,9 +31,11 @@
 import homeHero from '@/components/home/hero'
 import getStarted from '@/components/home/get_started'
 import featureBlock from '@/components/home/feature-block'
+import lfMission from '@/components/home/mission'
+import lfSupport from '@/components/home/home-support'
 export default {
   name: 'home_page',
-  components: { homeHero, getStarted, featureBlock },
+  components: { homeHero, getStarted, featureBlock, lfMission, lfSupport },
   data: () => ({
     blocks: [
       {
@@ -52,6 +58,16 @@ export default {
       },
     ],
   }),
+  head: {
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'LiveFire is professional firearms training made accessible, approachable & affordable for everyone, everywhere. Now available for IOS  and Android devices!',
+      },
+    ],
+  },
 }
 </script>
 
