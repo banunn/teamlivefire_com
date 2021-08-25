@@ -10,9 +10,26 @@
         </div>
       </div>
     </v-parallax>
-    <v-form name="contact" netlify class="form">
-      <v-text-field v-model="first" name="First Name" outlined label="First Name"></v-text-field>
-      <v-text-field v-model="last" name="Last Name" outlined label="Last Name"></v-text-field>
+    <v-form
+      method="POST"
+      action="/contact-success"
+      data-netlify="true"
+      name="contact"
+      netlify
+      class="form"
+    >
+      <v-text-field
+        v-model="first"
+        name="First Name"
+        outlined
+        label="First Name"
+      ></v-text-field>
+      <v-text-field
+        v-model="last"
+        name="Last Name"
+        outlined
+        label="Last Name"
+      ></v-text-field>
       <v-text-field
         :rules="rules"
         v-model="email"
@@ -20,7 +37,12 @@
         name="email"
         label="Email"
       ></v-text-field>
-      <v-text-field v-model="phone" name="phone" outlined label="Phone"></v-text-field>
+      <v-text-field
+        v-model="phone"
+        name="phone"
+        outlined
+        label="Phone"
+      ></v-text-field>
       <v-textarea
         outlined
         name="comments"
