@@ -5,17 +5,53 @@
         <img class="logo" src="~/assets/logo.svg" alt="" />
       </NuxtLink>
       <v-spacer />
-      <v-btn text to="/support">Support</v-btn>
-      <v-btn
-        depressed
-        tag="a"
-        href="https://access.teamlivefire.com/manage/"
-        target="blank"
-        color="black"
-        class="ml-4 white--text"
-        >Log In</v-btn
+      <div class="nav-links d-none d-md-block">
+        <v-btn text to="/support">Support</v-btn>
+        <v-btn
+          depressed
+          tag="a"
+          href="https://access.teamlivefire.com/manage/"
+          target="blank"
+          color="black"
+          class="ml-4 white--text"
+          >Log In</v-btn
+        >
+      </div>
+      <v-app-bar-nav-icon
+        class="d-none d-sm-block d-md-none"
+        @click="drawer = true"
       >
+      </v-app-bar-nav-icon>
     </v-app-bar>
+    <v-navigation-drawer absolute right v-model="drawer" temporary width="80%">
+      <div class="row justify-end" style="padding: 24px 16px">
+        <v-btn @click="drawer = false" icon elevation="0" large
+          ><v-icon>mdi-close</v-icon></v-btn
+        >
+      </div>
+      <v-list>
+        <v-list style="text-align: center">
+          <v-list-item to="/">
+            <v-list-item-content>
+              <v-list-item-title>Home</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <v-list-item to="/support">
+            <v-list-item-content>
+              <v-list-item-title>Support</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <v-list-item
+            href="https://access.teamlivefire.com/manage/"
+            target="_blank"
+          >
+            <v-list-item-content>
+              <v-list-item-title>Log In</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
+      </v-list>
+    </v-navigation-drawer>
     <v-main :class="{ 'pt-md-0': routeName === '/' }">
       <Nuxt />
     </v-main>
@@ -43,6 +79,7 @@ export default {
   data() {
     return {
       bg: 'transparent',
+      drawer: false,
     }
   },
   mounted() {

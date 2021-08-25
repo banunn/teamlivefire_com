@@ -4,7 +4,7 @@
     <get-started />
     <div class="wrap">
       <div class="row">
-        <v-col class="copy" sm="9" md="3">
+        <v-col id="focus" class="copy" sm="9" md="3">
           <h4 class="subline">Focus</h4>
           <p class="head-copy">
             We're bridging the gap between gun owners and professional training
@@ -98,6 +98,13 @@ export default {
       background: #000;
       display: block;
     }
+  }
+}
+
+#focus {
+  margin-bottom: 72px;
+  @media (max-width: 1000px) {
+    margin: 0 72px 72px 72px;
   }
 }
 </style>

@@ -1,6 +1,8 @@
 <template>
   <div class="hero">
-    <video autoplay loop src="~/assets/video_recolor_4.mp4"></video>
+    <video autoplay loop playsinline src="~/assets/video_recolor_4.mp4">
+      <img src="~/assets/hero_bg.webp" alt="" />
+    </video>
     <div class="overlay"></div>
     <div class="lockup">
       <h1>Professional<br />Firearms Training</h1>
@@ -38,7 +40,7 @@ export default {
     background: linear-gradient(transparent, transparent, #000000);
   }
   .lockup {
-    z-index: 100;
+    z-index: 1;
     position: absolute;
     left: 50%;
     top: 64px;
