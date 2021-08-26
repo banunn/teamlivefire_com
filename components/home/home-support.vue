@@ -53,6 +53,7 @@ dl {
   gap: 24px 0;
   flex-wrap: wrap;
   width: 50%;
+  display: grid;
   dt {
     flex: 1;
     font-weight: bold;
