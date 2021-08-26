@@ -23,10 +23,7 @@
           >Log In</v-btn
         >
       </div>
-      <v-app-bar-nav-icon
-        class="d-none d-sm-block d-md-none"
-        @click="drawer = true"
-      >
+      <v-app-bar-nav-icon class="nav-icon" @click="drawer = true">
       </v-app-bar-nav-icon>
     </v-app-bar>
     <v-navigation-drawer absolute right v-model="drawer" temporary width="80%">
@@ -124,7 +121,12 @@ export default {
 .logo {
   width: 212px;
 }
-
+.nav-icon {
+  display: none;
+  @media (max-width: 959px) {
+    display: inherit;
+  }
+}
 .v-application {
   font-family: 'Industry', Arial, Helvetica, sans-serif;
 }
