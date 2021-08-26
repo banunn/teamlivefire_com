@@ -14,7 +14,6 @@
       method="POST"
       action="/contact-success"
       data-netlify="true"
-      value="contactFormVal"
       name="contact"
       netlify
       class="form"

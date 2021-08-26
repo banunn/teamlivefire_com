@@ -7,7 +7,7 @@
       </div>
     </v-col>
     <v-col md="7" sm="12">
-      <v-img :src="img"></v-img>
+      <v-img :src="img + '?nf_resize=smartcrop&w1000'"></v-img>
     </v-col>
   </div>
 </template>
