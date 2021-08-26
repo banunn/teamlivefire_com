@@ -8,7 +8,7 @@
       />
     </div>
     <div class="row">
-      <v-col sm="12" md="8">
+      <v-col sm="12" xs="12" md="8">
         <dl>
           <dt>General Info:</dt>
           <dd>info@teamlivefire.com</dd>
@@ -17,20 +17,29 @@
           <dt>Location:</dt>
           <dd>
             <address>
-              <span>8240 E 111th ST S, Unit C </span>
+              <span>8240 E 111th ST S, Unit C </span><br />
               <span>Bixby, OK 74008 </span>
             </address>
           </dd>
         </dl>
       </v-col>
-      <v-col class="media" sm="12" md="4">
+      <v-col class="media" sm="12" xs="12" md="4">
         <p class="title">Media Inquiries:</p>
         <p class="body-copy">
           For press & media inquiries, please contact us by email at
           <span class="text-bold bold">connect@teamlivefire.com</span>
         </p>
-        <a href=""><img src="~/assets/icon_ig.webp" alt="" /></a
-        ><a href=""><img src="~/assets/icon_fb.webp" alt="" /></a>
+        <a
+          href="https://www.instagram.com/teamlivefire/"
+          target="_blank"
+          title="LiveFire on Instagram"
+          ><img src="~/assets/icon_ig.webp" alt="" /></a
+        ><a
+          href="https://www.facebook.com/teamlivefire"
+          target="_blank"
+          title="LiveFire on Facebook"
+          ><img src="~/assets/icon_fb.webp" alt=""
+        /></a>
       </v-col>
     </div>
   </div>
@@ -49,6 +58,9 @@ export default {
 dl {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  @media (max-width: 1000px) {
+    grid-template-columns: 1fr;
+  }
   margin-top: 48px;
   gap: 24px 0;
   flex-wrap: wrap;

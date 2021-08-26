@@ -75,8 +75,14 @@ export default {
 <style lang="scss" scoped>
 .wrap {
   max-width: 1632px;
-  padding: 0 16px;
+  padding: 0 64px;
   margin: 88px auto;
+  @media (max-width: 1200px) {
+    padding: 0 32px;
+  }
+  @media (max-width: 1000px) {
+    padding: 0 24px;
+  }
 }
 
 .copy {
@@ -104,6 +110,7 @@ export default {
 
 #focus {
   margin-bottom: 72px;
+
   @media (max-width: 1000px) {
     margin: 0 72px 72px 72px;
   }

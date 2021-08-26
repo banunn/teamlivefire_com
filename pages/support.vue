@@ -65,12 +65,18 @@
       </div>
       <input type="hidden" name="form-name" value="support-form" />
     </v-form>
+    <div style="border-top: 1px solid #000; margin-top: 48px">
+      <lf-support class="wrap-lg"></lf-support>
+    </div>
   </div>
 </template>
 
 <script>
+import lfSupport from '@/components/home/home-support'
+
 export default {
   name: 'support_page',
+  components: { lfSupport },
   data: () => ({
     first: '',
     last: '',
@@ -89,6 +95,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.wrap-lg {
+  max-width: 1632px;
+  padding: 0 16px;
+  margin: 88px auto;
+}
 .text-headline {
   font-size: 40px;
   line-height: 1.5em;
