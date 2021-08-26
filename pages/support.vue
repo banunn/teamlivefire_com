@@ -62,6 +62,7 @@
         >
       </div>
     </v-form>
+    <input type="hidden" name="contact" value="contact" />
   </div>
 </template>
 
