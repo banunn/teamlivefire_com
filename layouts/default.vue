@@ -65,8 +65,13 @@
         <div class="row justify-space-between">
           <span>&copy; LiveFire, LLC {{ new Date().getFullYear() }}</span>
           <div class="links">
-            <a href="" class="white--text">Terms &amp; Conditions</a> |
-            <a href="" class="white--text">Privacy Policy</a>
+            <NuxtLink to="/termsandconditions" tag="a" class="white--text"
+              >Terms &amp; Conditions</NuxtLink
+            >
+            |
+            <NuxtLink to="/privacypolicy" tag="a" class="white--text"
+              >Privacy Policy</NuxtLink
+            >
           </div>
         </div>
       </v-card>
@@ -110,5 +115,9 @@ export default {
 <style scoped lang="scss">
 .logo {
   width: 212px;
+}
+
+.v-application {
+  font-family: 'Industry', Arial, Helvetica, sans-serif;
 }
 </style>

@@ -10,6 +10,7 @@
         </div>
       </div>
     </v-parallax>
+    <div class="wrap"><h2 style="font-weight: 300">HOW CAN WE HELP?</h2></div>
     <v-form
       method="POST"
       data-netlify-honeypot="bot-field"
@@ -104,8 +105,10 @@ export default {
 }
 .wrap {
   position: relative;
+  margin: 0 auto;
+  padding: 48px 24px 0 24px;
+  max-width: 680px;
 }
-
 .form {
   margin: 0 auto;
   padding: 48px 24px;
