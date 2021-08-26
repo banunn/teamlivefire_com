@@ -61,8 +61,8 @@
           >Submit</v-btn
         >
       </div>
+      <input type="hidden" name="contact" value="contact" />
     </v-form>
-    <input type="hidden" name="contact" value="contact" />
   </div>
 </template>
 
