@@ -12,9 +12,9 @@
     </v-parallax>
     <v-form
       method="POST"
-      action="/contact-success"
+      data-netlify-honeypot="bot-field"
       data-netlify="true"
-      name="contact"
+      name="support-form"
       netlify
       class="form"
     >
@@ -61,7 +61,7 @@
           >Submit</v-btn
         >
       </div>
-      <input type="hidden" name="contact" value="contact" />
+      <input type="hidden" name="form-name" value="support-form" />
     </v-form>
   </div>
 </template>
