@@ -5,6 +5,8 @@
         src="~/assets/logo_dark.webp"
         title="LiveFire Logo"
         alt="LiveFire Logo"
+        height="16px"
+        width="155px"
       />
     </div>
     <div class="row">
