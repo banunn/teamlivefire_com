@@ -44,6 +44,7 @@
           <v-list-item
             href="https://access.teamlivefire.com/manage/"
             target="_blank"
+            rel="noopener"
           >
             <v-list-item-content>
               <v-list-item-title>Log In</v-list-item-title>

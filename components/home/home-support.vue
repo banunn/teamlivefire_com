@@ -32,11 +32,13 @@
         <a
           href="https://www.instagram.com/teamlivefire/"
           target="_blank"
+          rel="noopener"
           title="LiveFire on Instagram"
           ><img src="~/assets/icon_ig.webp" alt="" /></a
         ><a
           href="https://www.facebook.com/teamlivefire"
           target="_blank"
+          rel="noopener"
           title="LiveFire on Facebook"
           ><img src="~/assets/icon_fb.webp" alt=""
         /></a>

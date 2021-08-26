@@ -12,15 +12,27 @@
             <p class="body-copy mb-8">
               Scan this code to download<br />the LiveFire Training App.
             </p>
-            <img src="~/assets/lf_qr.webp" alt="" />
+            <img
+              height="143px"
+              width="143px"
+              title="Scan the and Download with the LiveFire QR Code"
+              src="~/assets/lf_qr.webp"
+              alt=""
+            />
           </div>
           <div class="cta d-md-none">
             <a class="dl-link" href="#">
-              <img src="~/assets/dl_ios.png" alt="Download LiveFire on IOS"
+              <img
+                width="165px"
+                height="51px"
+                src="~/assets/dl_ios.png"
+                alt="Download LiveFire on IOS"
             /></a>
             <a class="dl-link" href="#">
               <img
                 src="~/assets/dl_gp.png"
+                width="165px"
+                height="51px"
                 alt="Download LiveFire on Google Play"
             /></a>
           </div>
