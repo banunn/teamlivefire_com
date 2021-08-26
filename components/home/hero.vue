@@ -1,6 +1,6 @@
 <template>
   <div class="hero">
-    <video autoplay loop playsinline src="~/assets/video_recolor_4.mp4">
+    <video autoplay loop src="~/assets/video_recolor_4.mp4">
       <img src="~/assets/hero_bg.webp" alt="" />
     </video>
     <div class="overlay"></div>
