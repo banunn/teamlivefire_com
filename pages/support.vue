@@ -15,6 +15,7 @@
       data-netlify-honeypot="bot-field"
       data-netlify="true"
       name="support-form"
+      action="/contact-success"
       netlify
       class="form"
     >
