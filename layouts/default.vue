@@ -2,7 +2,13 @@
   <v-app light>
     <v-app-bar :color="bg" height="90px" flat hide-on-scroll fixed app>
       <NuxtLink to="/">
-        <img class="logo" src="~/assets/logo.svg" alt="" />
+        <img
+          height="212px"
+          width="31px"
+          class="logo"
+          src="~/assets/logo.svg"
+          alt=""
+        />
       </NuxtLink>
       <v-spacer />
       <div class="nav-links d-none d-md-block">
@@ -31,12 +37,12 @@
       </div>
       <v-list>
         <v-list style="text-align: center">
-          <v-list-item to="/">
+          <v-list-item to="/" title="Home">
             <v-list-item-content>
               <v-list-item-title>Home</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
-          <v-list-item to="/support">
+          <v-list-item to="/support" title="Support">
             <v-list-item-content>
               <v-list-item-title>Support</v-list-item-title>
             </v-list-item-content>
@@ -45,6 +51,7 @@
             href="https://access.teamlivefire.com/manage/"
             target="_blank"
             rel="noopener"
+            title="Livefire Account Magement"
           >
             <v-list-item-content>
               <v-list-item-title>Log In</v-list-item-title>
