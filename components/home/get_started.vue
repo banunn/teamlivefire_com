@@ -79,7 +79,7 @@ export default {
   @media (max-width: 1000px) {
     padding: 72px 24px;
     min-height: 100vh;
-    background-size: 80%;
+    background-size: 100%;
     background-position: bottom center;
   }
   .wrap {
